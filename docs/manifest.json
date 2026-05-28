@@ -1,0 +1,16 @@
+[
+  {
+    "id": "privacy-policy",
+    "title": "隐私政策",
+    "file": "privacy-policy.md",
+    "version": "1.0.0",
+    "updated": "2026-05-28"
+  },
+  {
+    "id": "terms-of-service",
+    "title": "用户服务协议",
+    "file": "terms-of-service.md",
+    "version": "1.0.0",
+    "updated": "2026-05-28"
+  }
+]

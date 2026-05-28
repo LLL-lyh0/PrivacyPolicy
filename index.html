@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="隐私政策与用户服务协议 — 法律文档展示">
+  <meta name="theme-color" content="#1e293b">
+
+  <!-- Open Graph / GitHub Pages 分享卡片 -->
+  <meta property="og:title" content="隐私政策 / 用户服务协议">
+  <meta property="og:description" content="隐私政策与用户服务协议法律文档">
+  <meta property="og:type" content="website">
+
+  <title>隐私政策 / 用户服务协议</title>
+  <style>
+    /* ═══════════════════════════════════════
+       变量 & 重置
+       ═══════════════════════════════════════ */
+    :root {
+      --sidebar-width: 260px;
+      --color-bg: #f8f9fa;
+      --color-sidebar: #1e293b;
+      --color-sidebar-text: #cbd5e1;
+      --color-sidebar-hover: rgba(255, 255, 255, 0.08);
+      --color-sidebar-active: #3b82f6;
+      --color-text: #1e293b;
+      --color-text-secondary: #64748b;
+      --color-border: #e2e8f0;
+      --color-card: #ffffff;
+      --color-link: #3b82f6;
+      --color-accent-soft: #eff6ff;
+      --max-content-width: 800px;
+      --transition-speed: 0.2s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.8;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ═══════════════════════════════════════
+       Sidebar
+       ═══════════════════════════════════════ */
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--color-sidebar);
+      color: var(--color-sidebar-text);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      overflow-y: auto;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-header {
+      padding: 24px 20px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      flex-shrink: 0;
+    }
+
+    .sidebar-header h2 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .sidebar-header p {
+      font-size: 12px;
+      margin-top: 4px;
+      opacity: 0.6;
+    }
+
+    .sidebar-nav {
+      flex: 1;
+      list-style: none;
+      padding: 8px 12px;
+    }
+
+    .sidebar-nav li {
+      margin-bottom: 2px;
+    }
+
+    .sidebar-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      color: var(--color-sidebar-text);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+    }
+
+    .sidebar-nav a:hover {
+      background: var(--color-sidebar-hover);
+      color: #ffffff;
+    }
+
+    .sidebar-nav a.active {
+      background: var(--color-sidebar-active);
+      color: #ffffff;
+    }
+
+    /* 导航图标（可选装饰） */
+    .sidebar-nav a::before {
+      content: "📄";
+      font-size: 13px;
+      opacity: 0.6;
+    }
+    .sidebar-nav a.active::before {
+      opacity: 1;
+    }
+
+    .sidebar-footer {
+      padding: 16px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 11px;
+      opacity: 0.45;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════
+       Main content area
+       ═══════════════════════════════════════ */
+    .main {
+      margin-left: var(--sidebar-width);
+      flex: 1;
+      min-width: 0;
+    }
+
+    .content {
+      max-width: var(--max-content-width);
+      margin: 0 auto;
+      padding: 40px 32px 80px;
+    }
+
+    /* ═══════════════════════════════════════
+       Markdown 渲染内容
+       ═══════════════════════════════════════ */
+    .markdown-body h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0f172a;
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: 12px;
+    }
+
+    .markdown-body h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: #1e293b;
+    }
+
+    .markdown-body h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+
+    .markdown-body p {
+      margin-bottom: 12px;
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+      margin-bottom: 12px;
+      padding-left: 24px;
+    }
+
+    .markdown-body li {
+      margin-bottom: 4px;
+    }
+
+    .markdown-body li > p {
+      margin-bottom: 0;
+    }
+
+    .markdown-body strong {
+      font-weight: 600;
+    }
+
+    .markdown-body em {
+      font-style: italic;
+    }
+
+    .markdown-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 32px 0;
+    }
+
+    .markdown-body blockquote {
+      border-left: 3px solid var(--color-sidebar-active);
+      padding: 8px 16px;
+      margin: 16px 0;
+      color: var(--color-text-secondary);
+      background: var(--color-accent-soft);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .markdown-body a {
+      color: var(--color-link);
+      text-decoration: none;
+    }
+
+    .markdown-body a:hover {
+      text-decoration: underline;
+    }
+
+    .markdown-body code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    .markdown-body pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .markdown-body pre code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+
+    /* ═══════════════════════════════════════
+       元信息栏（版本 / 日期）
+       ═══════════════════════════════════════ */
+    .meta-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .meta-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 3px 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      white-space: nowrap;
+    }
+
+    .meta-bar span::before {
+      font-size: 14px;
+    }
+    .meta-bar .meta-version::before { content: "🏷️ "; }
+    .meta-bar .meta-date::before    { content: "📅 "; }
+
+    /* ═══════════════════════════════════════
+       状态提示
+       ═══════════════════════════════════════ */
+    .info-banner {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: #92400e;
+      line-height: 1.6;
+    }
+
+    .info-banner code {
+      background: #fde68a;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+
+    .loading, .error-msg {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .loading {
+      color: var(--color-text-secondary);
+    }
+
+    .loading::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      border: 2px solid var(--color-border);
+      border-top-color: var(--color-sidebar-active);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .error-msg {
+      color: #dc2626;
+    }
+
+    .error-msg code {
+      background: #fef2f2;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* ═══════════════════════════════════════
+       移动端：汉堡菜单
+       ═══════════════════════════════════════ */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      background: var(--color-sidebar);
+      color: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: background var(--transition-speed) ease;
+    }
+
+    .menu-toggle:hover {
+      background: #334155;
+    }
+
+    .menu-toggle:focus-visible {
+      outline: 2px solid var(--color-sidebar-active);
+      outline-offset: 2px;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 9;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .overlay.show {
+      display: block;
+      opacity: 1;
+    }
+
+    /* ═══════════════════════════════════════
+       响应式
+       ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .content {
+        padding: 56px 16px 40px;
+      }
+
+      .markdown-body h1 {
+        font-size: 22px;
+      }
+
+      .markdown-body h2 {
+        font-size: 18px;
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       打印样式
+       ═══════════════════════════════════════ */
+    @media print {
+      .sidebar, .menu-toggle, .overlay, .info-banner {
+        display: none !important;
+      }
+      .main {
+        margin-left: 0;
+      }
+      .content {
+        padding: 20px;
+        max-width: none;
+      }
+      body {
+        background: #fff;
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       平滑页面切换（内容区域淡入）
+       ═══════════════════════════════════════ */
+    .fade-in {
+      animation: fadeIn 0.25s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- 汉堡菜单按钮（移动端） -->
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- ── 侧边栏 ── -->
+  <aside class="sidebar" id="sidebar" aria-label="文档导航">
+    <div class="sidebar-header">
+      <h2>📋 法律文档</h2>
+      <p>隐私政策 / 用户协议</p>
+    </div>
+    <ul class="sidebar-nav" id="sidebarNav">
+      <!-- 由 JS 动态填充 -->
+    </ul>
+    <div class="sidebar-footer">点击文档切换查阅</div>
+  </aside>
+
+  <!-- ── 主内容区 ── -->
+  <main class="main">
+    <div class="content" id="content">
+      <!-- 由 JS 动态渲染 -->
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ═══════════════════════════════════════════════
+         嵌入式文档数据
+         — 所有内容直接内联，无需 fetch / manifest
+         — 同时兼容 file:// 本地浏览 与 GitHub Pages
+         ═══════════════════════════════════════════════ */
+      var DOCS = [
+        {
+          id: "privacy-policy",
+          title: "隐私政策",
+          version: "1.0.0",
+          updated: "2026-05-28",
+          content: [
+            "# 隐私政策",
+            "",
+            "**版本生效日期：2026年5月28日**",
+            "",
+            "## 引言",
+            "",
+            "本隐私政策（以下简称\"本政策\"）旨在向您说明我们如何收集、使用、存储和保护您的个人信息。请您在使用我们的服务前，仔细阅读并充分理解本政策。",
+            "",
+            "## 一、我们收集的信息",
+            "",
+            "### 1.1 您主动提供的信息",
+            "- **账户信息**：当您注册账户时，我们可能收集您的用户名、电子邮箱、手机号码等信息。",
+            "- **用户内容**：您在使用服务过程中上传、发布或传输的内容。",
+            "",
+            "### 1.2 我们自动收集的信息",
+            "- **设备信息**：设备型号、操作系统版本、唯一设备标识符等。",
+            "- **日志信息**：IP地址、访问时间、访问页面、浏览器类型等。",
+            "- **位置信息**：基于IP地址的粗略地理位置。",
+            "",
+            "## 二、我们如何使用信息",
+            "",
+            "我们收集的信息将用于以下目的：",
+            "",
+            "1. **提供服务**：为您提供、维护和改进我们的服务。",
+            "2. **安全保障**：检测和防范安全威胁、欺诈及其他恶意活动。",
+            "3. **通信联络**：向您发送服务相关的通知、更新和安全警报。",
+            "4. **合规要求**：遵守适用的法律法规和监管要求。",
+            "",
+            "## 三、信息的存储与保护",
+            "",
+            "### 3.1 存储地点",
+            "您的个人信息将存储在中华人民共和国境内的服务器上。",
+            "",
+            "### 3.2 存储期限",
+            "我们仅在实现本政策所述目的所必需的期限内保留您的个人信息，除非法律另有要求。",
+            "",
+            "### 3.3 安全措施",
+            "我们采用业界通行的安全技术和组织措施来保护您的个人信息，包括但不限于：",
+            "- 数据加密传输（SSL/TLS）",
+            "- 访问控制机制",
+            "- 定期的安全审计",
+            "",
+            "## 四、信息的共享与披露",
+            "",
+            "### 4.1 我们不会出售您的个人信息。",
+            "",
+            "### 4.2 在以下情形下，我们可能共享您的信息：",
+            "- **获得您的同意**：在获得您明确同意后共享。",
+            "- **法律要求**：根据法律法规、法院命令或政府要求进行披露。",
+            "- **服务提供商**：与为我们提供服务的第三方合作方共享，前提是他们遵守严格的数据保护条款。",
+            "",
+            "## 五、您的权利",
+            "",
+            "根据适用的数据保护法律，您享有以下权利：",
+            "",
+            "1. **访问权**：您有权获取我们持有的关于您的个人信息的副本。",
+            "2. **更正权**：您有权要求更正不准确的个人信息。",
+            "3. **删除权**：在特定条件下，您有权要求删除您的个人信息。",
+            "4. **撤回同意**：您可以随时撤回之前给予的同意。",
+            "5. **投诉权**：您有权向相关监管机构提出投诉。",
+            "",
+            "## 六、未成年人保护",
+            "",
+            "我们的服务不面向未满14周岁的未成年人。如果我们发现无意中收集了未成年人的个人信息，我们将立即删除相关数据。",
+            "",
+            "## 七、政策更新",
+            "",
+            "我们可能会不时更新本隐私政策。更新后的版本将在本页面发布，并在必要时通过适当方式通知您。",
+            "",
+            "## 八、联系我们",
+            "",
+            "如您对本隐私政策有任何疑问、意见或建议，请通过以下方式与我们联系：",
+            "",
+            "- **电子邮箱**：privacy@example.com",
+            "- **联系地址**：[公司地址]",
+            "",
+            "---",
+            "",
+            "*本隐私政策最终解释权归本公司所有。*"
+          ].join("\n")
+        },
+        {
+          id: "terms-of-service",
+          title: "用户服务协议",
+          version: "1.0.0",
+          updated: "2026-05-28",
+          content: [
+            "# 用户服务协议",
+            "",
+            "**版本生效日期：2026年5月28日**",
+            "",
+            "## 引言",
+            "",
+            "欢迎使用我们的服务。本用户服务协议（以下简称\"本协议\"）是您与本公司之间关于使用我们服务的法律协议。请您仔细阅读并充分理解本协议的全部内容。",
+            "",
+            "## 一、协议的接受",
+            "",
+            "1.1 通过访问或使用我们的服务，您确认您已阅读、理解并同意受本协议约束。",
+            "",
+            "1.2 如果您不同意本协议的任何条款，请停止使用我们的服务。",
+            "",
+            "1.3 您承诺具备完全民事行为能力，或已获得法定监护人的同意。",
+            "",
+            "## 二、服务说明",
+            "",
+            "### 2.1 服务内容",
+            "我们向您提供[具体服务描述]。服务内容和范围可能随时调整。",
+            "",
+            "### 2.2 服务可用性",
+            "我们努力确保服务的稳定性和可用性，但不对服务的持续可用性或无故障运行做出保证。",
+            "",
+            "## 三、用户账户",
+            "",
+            "### 3.1 注册",
+            "您需要提供准确、完整的信息来创建账户，并负责维护信息的及时更新。",
+            "",
+            "### 3.2 账户安全",
+            "您对账户下的所有活动负责。请妥善保管您的账户凭证，如发现未经授权的使用，请立即通知我们。",
+            "",
+            "### 3.3 账户注销",
+            "您可随时申请注销账户。注销后，我们将按照隐私政策处理您的数据。",
+            "",
+            "## 四、用户行为规范",
+            "",
+            "在使用我们的服务时，您同意不会：",
+            "",
+            "1. 违反任何适用的法律法规",
+            "2. 侵犯他人的知识产权或其他合法权益",
+            "3. 传播恶意软件、病毒或其他有害内容",
+            "4. 从事欺诈、虚假陈述或其他欺骗性行为",
+            "5. 干扰或破坏服务的正常运行",
+            "6. 未经授权访问他人的账户或数据",
+            "7. 发送垃圾信息或未经请求的商业广告",
+            "",
+            "## 五、知识产权",
+            "",
+            "### 5.1 我们的知识产权",
+            "服务及其所有内容（包括但不限于软件、界面设计、商标、标识等）的知识产权归本公司所有。",
+            "",
+            "### 5.2 用户内容",
+            "您保留对您所创作内容的知识产权。您授予我们在提供服务所必需的范围内使用您内容的许可。",
+            "",
+            "## 六、第三方服务",
+            "",
+            "我们的服务可能包含指向第三方网站或服务的链接。我们对第三方服务的内容、隐私政策和做法不承担责任。",
+            "",
+            "## 七、免责条款",
+            "",
+            "7.1 服务按\"现状\"提供，在法律允许的最大范围内，我们不做出任何明示或暗示的保证。",
+            "",
+            "7.2 因不可抗力、计算机病毒、黑客攻击等原因导致的服务中断或数据损失，我们不承担责任，但将尽力减少由此造成的影响。",
+            "",
+            "## 八、责任限制",
+            "",
+            "在法律允许的最大范围内，对于因使用或无法使用服务而产生的任何间接、附带、特殊或后果性损害，我们不承担责任。",
+            "",
+            "## 九、协议的变更",
+            "",
+            "我们可能会不时修改本协议。修改后的协议将在本页面发布，重大变更将通过适当方式通知您。继续使用服务即表示您同意修改后的协议。",
+            "",
+            "## 十、终止",
+            "",
+            "### 10.1 您可随时停止使用服务来终止本协议。",
+            "",
+            "### 10.2 如果您违反本协议的任何条款，我们有权暂停或终止您对服务的访问。",
+            "",
+            "## 十一、管辖法律",
+            "",
+            "本协议的订立、执行和解释适用中华人民共和国法律。因本协议引起的争议，双方应友好协商解决；协商不成的，任何一方均可向本公司所在地有管辖权的人民法院提起诉讼。",
+            "",
+            "## 十二、联系我们",
+            "",
+            "如您对本协议有任何疑问，请通过以下方式联系我们：",
+            "",
+            "- **电子邮箱**：support@example.com",
+            "- **联系地址**：[公司地址]",
+            "",
+            "---",
+            "",
+            "*本协议最终解释权归本公司所有。*"
+          ].join("\n")
+        }
+      ];
+
+      /* ═══════════════════════════════════════════════
+         内建 Markdown 渲染器
+         零外部依赖，处理本项目的所有 markdown 语法
+         ═══════════════════════════════════════════════ */
+      function renderMarkdown(md) {
+        // 1. HTML 转义
+        var html = md
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+
+        // 2. 按行处理，逐行构建 HTML
+        var lines = html.split('\n');
+        var out = [];
+        var inCodeBlock = false;
+        var codeBuffer = [];
+
+        function flushCodeBlock() {
+          if (codeBuffer.length) {
+            out.push('<pre><code>' + codeBuffer.join('\n') + '</code></pre>');
+            codeBuffer = [];
+          }
+        }
+
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i];
+
+          // ── 代码块 ``` ──
+          if (/^```/.test(line)) {
+            if (inCodeBlock) {
+              out.push('<pre><code>' + codeBuffer.join('\n') + '</code></pre>');
+              codeBuffer = [];
+              inCodeBlock = false;
+            } else {
+              flushCodeBlock();
+              inCodeBlock = true;
+            }
+            continue;
+          }
+
+          if (inCodeBlock) {
+            codeBuffer.push(line);
+            continue;
+          }
+
+          // ── 空行 ──
+          if (line.trim() === '') {
+            flushCodeBlock();
+            out.push('');
+            continue;
+          }
+
+          // ── 水平线 --- ──
+          if (/^---+\s*$/.test(line)) {
+            out.push('<hr>');
+            continue;
+          }
+
+          // ── Headings ──
+          var hMatch = line.match(/^(#{1,3})\s+(.+)$/);
+          if (hMatch) {
+            var level = hMatch[1].length;
+            var text = inlineFormat(hMatch[2]);
+            out.push('<h' + level + '>' + text + '</h' + level + '>');
+            continue;
+          }
+
+          // ── 无序列表 - / * ──
+          var ulMatch = line.match(/^[-*]\s+(.+)$/);
+          if (ulMatch) {
+            out.push('<li>' + inlineFormat(ulMatch[1]) + '</li>');
+            continue;
+          }
+
+          // ── 有序列表 1. / 2. ──
+          var olMatch = line.match(/^(\d+)\.\s+(.+)$/);
+          if (olMatch) {
+            out.push('<li value="' + olMatch[1] + '">' + inlineFormat(olMatch[2]) + '</li>');
+            continue;
+          }
+
+          // ── Blockquote > ──
+          var bqMatch = line.match(/^>\s?(.*)$/);
+          if (bqMatch) {
+            out.push('<blockquote><p>' + inlineFormat(bqMatch[1]) + '</p></blockquote>');
+            continue;
+          }
+
+          // ── 普通段落 ──
+          out.push('<p>' + inlineFormat(line) + '</p>');
+        }
+
+        flushCodeBlock();
+
+        // 3. 合并列表：将连续的 <li> 包裹在 <ul> 或 <ol> 中
+        var merged = out.join('\n');
+        merged = merged.replace(/((?:<li[^>]*>.*?<\/li>\n?)+)/g, function (match) {
+          // 检测是否包含 value 属性 → 有序列表
+          if (/value="\d+"/.test(match)) {
+            return '<ol>\n' + match + '</ol>';
+          }
+          return '<ul>\n' + match + '</ul>';
+        });
+
+        return merged;
+      }
+
+      /* 行内格式化：**加粗** *斜体* `行内代码` [链接](url) */
+      function inlineFormat(text) {
+        // 必须按顺序：先转义，再做标记替换
+        return text
+          // 行内代码 `...`
+          .replace(/`([^`]+)`/g, '<code>$1</code>')
+          // 粗体 **...**
+          .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+          // 斜体 *...*（但不能匹配到粗体区域）
+          .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, '<em>$1</em>')
+          // 链接 [text](url)
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+      }
+
+      /* ═══════════════════════════════════════════════
+         DOM 引用
+         ═══════════════════════════════════════════════ */
+      var contentEl  = document.getElementById('content');
+      var sidebarNav = document.getElementById('sidebarNav');
+      var sidebar    = document.getElementById('sidebar');
+      var menuToggle = document.getElementById('menuToggle');
+      var overlay    = document.getElementById('overlay');
+
+      /* ═══════════════════════════════════════════════
+         工具函数
+         ═══════════════════════════════════════════════ */
+      function getQueryId() {
+        var params = new URLSearchParams(window.location.search);
+        return params.get('id');
+      }
+
+      function isFileProtocol() {
+        return window.location.protocol === 'file:';
+      }
+
+      /* ═══════════════════════════════════════════════
+         渲染文档
+         ═══════════════════════════════════════════════ */
+      function renderDoc(doc) {
+        // 构建元信息栏
+        var metaParts = [];
+        if (doc.version) {
+          metaParts.push('<span class="meta-version">版本 ' + doc.version + '</span>');
+        }
+        if (doc.updated) {
+          metaParts.push('<span class="meta-date">更新于 ' + doc.updated + '</span>');
+        }
+        var metaHTML = metaParts.length ? '<div class="meta-bar">' + metaParts.join('') + '</div>' : '';
+
+        // file:// 协议提示
+        var banner = '';
+        if (isFileProtocol()) {
+          banner = '<div class="info-banner">💡 当前通过 <code>file://</code> 协议打开，内容已内联加载，无需 HTTP 服务。要预览完整效果，也可运行 <code>python -m http.server 8080</code> 后访问 <code>http://localhost:8080</code></div>';
+        }
+
+        // 渲染 markdown
+        var bodyHTML = '<div class="markdown-body fade-in">' + renderMarkdown(doc.content) + '</div>';
+
+        contentEl.innerHTML = banner + metaHTML + bodyHTML;
+        document.title = doc.title + ' — 隐私政策 / 用户服务协议';
+      }
+
+      function renderError(msg) {
+        contentEl.innerHTML = '<div class="error-msg">' + msg + '</div>';
+      }
+
+      /* ═══════════════════════════════════════════════
+         构建侧边栏
+         ═══════════════════════════════════════════════ */
+      function buildSidebar(docs, activeId) {
+        sidebarNav.innerHTML = docs.map(function (d) {
+          var cls = d.id === activeId ? ' class="active"' : '';
+          return '<li><a href="?id=' + encodeURIComponent(d.id) + '"' + cls + '>' + d.title + '</a></li>';
+        }).join('');
+      }
+
+      function updateSidebarActive(activeId) {
+        var links = sidebarNav.querySelectorAll('a');
+        links.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '?id=' + encodeURIComponent(activeId));
+        });
+      }
+
+      /* ═══════════════════════════════════════════════
+         移动端侧边栏控制
+         ═══════════════════════════════════════════════ */
+      function closeSidebar() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+      }
+
+      menuToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('show');
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      sidebarNav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          setTimeout(closeSidebar, 150);
+        }
+      });
+
+      /* ═══════════════════════════════════════════════
+         加载指定文档
+         ═══════════════════════════════════════════════ */
+      function loadDoc(id, docs) {
+        // 查找文档，找不到则用第一篇
+        var doc = null;
+        if (id) {
+          doc = docs.filter(function (d) { return d.id === id; })[0];
+        }
+        if (!doc) {
+          doc = docs[0];
+        }
+
+        if (!doc) {
+          renderError('没有可用的文档');
+          return;
+        }
+
+        // 更新 URL（不刷新页面）
+        var currentId = getQueryId();
+        if (doc.id !== currentId) {
+          var url = new URL(window.location);
+          url.searchParams.set('id', doc.id);
+          window.history.replaceState(null, '', url);
+        }
+
+        // 更新侧边栏高亮
+        updateSidebarActive(doc.id);
+
+        // 渲染内容
+        renderDoc(doc);
+      }
+
+      /* ═══════════════════════════════════════════════
+         初始化
+         ═══════════════════════════════════════════════ */
+      function init() {
+        if (!DOCS || DOCS.length === 0) {
+          renderError('没有配置任何文档');
+          return;
+        }
+
+        var queryId = getQueryId();
+        var activeId = queryId && DOCS.some(function (d) { return d.id === queryId; }) ? queryId : DOCS[0].id;
+
+        buildSidebar(DOCS, activeId);
+        loadDoc(activeId, DOCS);
+      }
+
+      // DOMContentLoaded 后初始化
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+</html>
