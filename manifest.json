@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "updated": "2026-05-28",
+  "hub": {
+    "title": "法律文档",
+    "note": "总索引。对外的正式链接请使用带 ?id= 的地址，指定游戏后页面只显示该游戏的文档。"
+  },
+  "games": [
+    {
+      "id": "modulewarship",
+      "name": "ModuleWarShip",
+      "name_zh": "方块战舰",
+      "latest": "2026-05-28",
+      "versions": [
+        {
+          "v": "2026-05-28",
+          "effective": "2026-05-28",
+          "note": "首次发布",
+          "docs": [
+            {
+              "id": "privacy",
+              "title": "隐私政策",
+              "file": "docs/modulewarship/2026-05-28/privacy.md"
+            },
+            {
+              "id": "terms",
+              "title": "用户服务协议",
+              "file": "docs/modulewarship/2026-05-28/terms.md"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
