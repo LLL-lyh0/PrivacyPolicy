@@ -47,6 +47,31 @@
           ]
         }
       ]
+    },
+    {
+      "id": "wordworld",
+      "name": "WordWorld",
+      "name_zh": "字世界",
+      "latest": "2026-11-21",
+      "versions": [
+        {
+          "v": "2026-11-21",
+          "effective": "2026-11-21",
+          "note": "首次发布",
+          "docs": [
+            {
+              "id": "privacy",
+              "title": "隐私政策",
+              "file": "docs/wordworld/2026-11-21/privacy.md"
+            },
+            {
+              "id": "terms",
+              "title": "用户服务协议",
+              "file": "docs/wordworld/2026-11-21/terms.md"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
